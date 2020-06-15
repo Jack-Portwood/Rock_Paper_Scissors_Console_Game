@@ -26,7 +26,7 @@ checkRandomNumber = (paramInput) => {
         case 1:
             return 'paper';
         case 2: 
-            return 'scissor'; 
+            return 'scissors'; 
         default:
             return 'error: case statement failed';
     }
@@ -37,13 +37,13 @@ checkRandomNumber = (paramInput) => {
 // console.log(getComputerChoice());
 
 
-let determineWinner = (userChoice, computerChoice) => {
-    if(userChoice === computerChoice) {
-        return 'The game is a tie!'; 
-    }
-}
+// let determineWinner = (userChoice, computerChoice) => {
+//     if(userChoice === computerChoice) {
+//         return 'The game is a tie!'; 
+//     }
+// }
 
-console.log(determineWinner(userChoice, getComputerChoice()));
+// console.log(determineWinner(userChoice, getComputerChoice()));
 
 winOrLose = () => {
 
@@ -54,4 +54,27 @@ winOrLose = () => {
     console.log('Your threw: ' + userInput);
 
     console.log('The computer threw: ' + computerChoice);
+
+
+if(userInput !== computerChoice) { 
+    if (userInput === 'rock' && computerChoice === 'paper'){ 
+        console.log('The computer won!');
+    }else if( userInput === 'rock' && computerChoice === 'scissors'){
+        console.log("You Won"); 
+    }else if( userInput === 'paper' && computerChoice === 'scissors'){
+        console.log("The computer won!");
+    }else if( userInput === 'paper' && computerChoice === 'rock'){
+        console.log("You Won"); 
+    }else if( userInput === 'scissors' && computerChoice === 'rock'){
+        console.log("The computer won!");
+    }else if( userInput === 'scissors' && computerChoice === 'paper'){
+        console.log("You won");
+    } else {
+        console.log("error: winorLose not working");
+    }
+    }else{
+        console.log('The game is a tie!'); 
+    }   
 }
+
+winOrLose();
