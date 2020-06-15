@@ -8,7 +8,7 @@ const  getUserChoice = userInput => {
         }
 };
 
-let testVar = "ROCK"
+let userChoice = "ROCK"
 
 
 
@@ -32,6 +32,26 @@ checkRandomNumber = (paramInput) => {
     }
 }
 
-console.log(checkRandomNumber(getComputerChoice()));
+// console.log(checkRandomNumber(getComputerChoice()));
 
-console.log(getComputerChoice());
+// console.log(getComputerChoice());
+
+
+let determineWinner = (userChoice, computerChoice) => {
+    if(userChoice === computerChoice) {
+        return 'The game is a tie!'; 
+    }
+}
+
+console.log(determineWinner(userChoice, getComputerChoice()));
+
+winOrLose = () => {
+
+    let userInput = userChoice.toLocaleLowerCase();
+
+    let computerChoice = checkRandomNumber(getComputerChoice());
+
+    console.log('Your threw: ' + userInput);
+
+    console.log('The computer threw: ' + computerChoice);
+}
